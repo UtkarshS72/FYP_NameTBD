@@ -1,13 +1,7 @@
 def conv3x3(pixels, kernel):
     assert len(pixels) == 9
     assert len(kernel) == 9
-
-    result = 0
-
-    for p, k in zip(pixels, kernel):
-        result += p * k
-
-    return result
+    return sum(pixels[i] * kernel[i] for i in range(9))
 
 
 pixels = [
